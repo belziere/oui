@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 4.05785, 8.073 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 position = Vector2( 4, 8 )
 input_pickable = false
