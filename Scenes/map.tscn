@@ -42,8 +42,7 @@ speed = 30
 
 [node name="Mob" parent="TileMap" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 123.155, 3.32415 )
-_sections_unfolded = [ "Material", "Pickable", "Transform", "Visibility", "Z Index" ]
+position = Vector2( 100, 50 )
 
 [connection signal="PlaceTour" from="TileMap/Player" to="." method="_on_Player_PlaceTour"]
 
