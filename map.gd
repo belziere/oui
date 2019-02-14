@@ -1,30 +1,22 @@
 extends Node2D
-
-
-# Internal node references
-onready var TileMap = $TileMap
-onready var Player = $TileMap/Player
 onready var Mob = $TileMap/Mob
+onready var Player = $TileMap/Player
 
+# class member variables go here, for example:
+# var a = 2
+# var b = "textvar"
 
-# Performed when added to scene
 func _ready():
+	# Called when the node is added to the scene for the first time.
+	# Initialization here
+	pass
 
-	# Connects the whistle to creating a new path
-	Player.connect("BOOP", self, "_calculate_new_path")
+func _process(delta):
+	_on_Player_checkpos()
+#	# Called every frame. Delta is time since last frame.
+#	# Update game logic here.
+#	pass
 
 
-# Calculates a new path and gives to sidekick
-func _calculate_new_path():
-
-	# Finds path
-	var path = TileMap.get_path(Mob.position, Player.position)
-
-	# If we got a path...
-	if path:
-		
-		# Remove the first point (it's where the sidekick is)
-		path.remove(0)
-		
-		# Sets the sidekick's path
-		Mob.path = path
+func _on_Player_checkpos():
+	var Playerpos = Player.get_position();

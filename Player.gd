@@ -1,9 +1,11 @@
 extends KinematicBody2D
 
-signal BOOP
+#onready var Mob = $ TileMap/Mob
+#onready var Player = $ TileMap/Player
 
 export (int) var speed 
 var screensize
+signal checkpos
 
 func _ready():
 	screensize = get_viewport_rect().size
@@ -25,4 +27,4 @@ func _physics_process(delta):
 		position.x = clamp(position.x, 0, screensize.x)
 		position.y = clamp(position.y, 0, screensize.y)
 	if Input.is_action_just_pressed("ui_accept"):
-		emit_signal("BOOP")
+		emit_signal("checkpos");
