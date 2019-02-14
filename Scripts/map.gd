@@ -18,9 +18,11 @@ func _process(delta):
 
 
 func _on_Player_PlaceTour():
-	var Playerpos = Player.get_global_position();
+	var TourPosx = Player.get_global_position().x;
+	var TourPosy = Player.get_global_position().y;
+	TourPosy -= 50
 	var TourScene = load("res://Scenes/Tour.tscn")
 	var Tour = TourScene.instance()
 	add_child(Tour)
-	Tour.position = Playerpos
-	
+	Tour.position.x = TourPosx
+	Tour.position.y = TourPosy
