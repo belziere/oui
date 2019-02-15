@@ -5,7 +5,7 @@
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Mob.tscn" type="PackedScene" id=4]
 
-[node name="Node2D" type="Node2D"]
+[node name="Map" type="Node2D" index="0"]
 
 position = Vector2( 2.54268, 0.0577879 )
 script = ExtResource( 1 )
@@ -36,14 +36,14 @@ _sections_unfolded = [ "Cell", "Collision", "Occluder", "Transform" ]
 
 [node name="Player" parent="TileMap" index="0" instance=ExtResource( 3 )]
 
-position = Vector2( 128.067, 158.213 )
+position = Vector2( 298.008, 140.676 )
 _sections_unfolded = [ "Audio Bus", "Collision", "Material", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
 speed = 30
 
 [node name="Mob" parent="TileMap" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 123.155, 3.32415 )
-_sections_unfolded = [ "Material", "Pickable", "Transform", "Visibility", "Z Index" ]
+position = Vector2( 287.88, 71.6558 )
+_sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
 
 [connection signal="PlaceTour" from="TileMap/Player" to="." method="_on_Player_PlaceTour"]
 
