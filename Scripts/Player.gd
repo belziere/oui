@@ -27,6 +27,8 @@ func _physics_process(delta):
 		position += velocity * delta
 		position.x = clamp(position.x, 0, screensize.x)
 		position.y = clamp(position.y, 0, screensize.y)
+	#if Input.is_action_just_pressed("ui_accept"): #TestCheckPos
+		#emit_signal("checkpos");
 	if Input.is_action_just_pressed("ui_accept"):
 		emit_signal("PlaceTour")
 		print("2");
