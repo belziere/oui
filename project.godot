@@ -12,7 +12,6 @@ config_version=3
 
 config/name="Projet ISN"
 run/main_scene="res://Scenes/map.tscn"
-config/icon="res://icon.png"
 
 [debug]
 
@@ -21,7 +20,7 @@ settings/fps/force_fps=60
 [display]
 
 window/size/width=1280
-window/size/height=720
+window/size/height=1019
 window/vsync/use_vsync=false
 
 [layer_names]
